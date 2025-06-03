@@ -1,0 +1,47 @@
+{% extends "_base.html" %}
+
+{% block content %}
+<h1>Detalhes da Pessoa</h1>
+
+<table>
+    <tr>
+        <td>Nome:</td>
+        <td>{{ pessoa.nome }}</td>
+    </tr>
+    <tr>
+        <td>Idade:</td>
+        <td>{{ pessoa.idade }}</td>
+    </tr>
+    <tr>
+        <td>Email:</td>
+        <td>{{ pessoa.email }}</td>
+    </tr>
+    <tr>
+        <td>CPF:</td>
+        <td>{{ pessoa.cpf }}</td>
+    </tr>
+    <tr>
+        <td>Telefone:</td>
+        <td>{{ pessoa.telefone }}</td>
+    </tr>
+    <tr>
+        <td>Setores:</td>
+        <td>
+        {% for setor in pessoa.setores.all %}
+            {{ setor.nome }}{% if not forloop.last %}, {% endif %}
+        {% endfor %}
+        <td>
+    </tr>
+    <tr>
+        <td>Data de Admissão:</td>
+        <td>{{ pessoa.add_em }}</td>
+    </tr>
+    <tr>
+        <td>
+            <a href="{% url 'pessoa:index' %}">
+                <button>Voltar</button>
+            </a>
+        </td>
+    </tr>
+</table>
+{% endblock content %}

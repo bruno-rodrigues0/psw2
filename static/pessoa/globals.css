@@ -1,0 +1,78 @@
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+table{
+    display: flex;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border-collapse: collapse;
+    border-radius: 0.5rem;
+    margin: 10px 0;
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+td, th {
+    padding: 1rem;
+}
+
+button {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 0.5rem;
+    background-color: #3398a5;
+    color: #fff;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #2c6a6f;
+}
+
+button.delete {
+    background-color: #d9534f;
+}
+
+button.delete:hover {
+    background-color: #c9302c;
+}
+
+form {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border-radius: 1rem;
+    padding: 1rem;
+    width: 100%;    
+    max-width: 600px;
+    margin: 10px 0;
+}
+
+form  div {
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+form div input {
+    width: 100%;
+    border: none;
+    border-radius: 1rem;
+    background-color: #d0d3d3;
+    padding: 0.5rem;
+}

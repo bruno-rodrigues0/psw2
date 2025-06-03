@@ -1,0 +1,32 @@
+{% extends "_base.html" %}
+
+{% block content %}
+  <h1>Lista de Setores</h1>
+  <table>
+    {% for setor in setores %}
+    <tr>
+      <td>{{ setor.nome }}</td>
+      <td>
+        <a href="{% url 'setor:details' setor.id %}">
+          <button>Detalhes</button>
+        </a>
+      </td>
+      <td>
+        <a href="{% url 'setor:update' setor.id %}">
+          <button>Atualizar</button>
+        </a>
+      </td>
+      <td>
+        <a href="{% url 'setor:delete' setor.id %}">
+          <button class="delete">Deletar</button>
+        </a>
+      </td>
+    </tr>
+    {% endfor %}
+  </table>
+  <div>
+    <a href="{% url 'setor:create' %}">
+      <button class="create btn-icon-split">Criar</button>
+    </a>
+  </div>
+{% endblock content %}
